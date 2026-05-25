@@ -20,7 +20,7 @@ A mobile app to log your daily mood and revisit past entries.
 
 | Home | Detail |
 |------|--------|
-| ![List of mood capsules with color indicators by mood](assets/screenshots/home-screen.jpeg) | ![Capsule detail showing mood emoji and entry text](assets/screenshots/detail-screen.jpeg) |
+| <img src="assets/screenshots/home-screen.jpeg" width="300" alt="List of mood capsules with color indicators by mood"/> | <img src="assets/screenshots/detail-screen.jpeg" width="300" alt="Capsule detail showing mood emoji and entry text"/> |
 
 ## Getting started
 
