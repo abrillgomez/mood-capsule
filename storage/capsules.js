@@ -12,3 +12,13 @@ export const saveCapsule = async (capsule) => {
   const updated = [capsule, ...existing];
   await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
 };
+
+export const hasTodayCapsule = async () => {
+  const capsules = await getCapsules();
+  const today = new Date().toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+  return capsules.some((c) => c.date === today);
+};

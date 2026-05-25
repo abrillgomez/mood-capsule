@@ -6,7 +6,7 @@ import {
   StyleSheet,
 } from "react-native";
 import { useState } from "react";
-import { saveCapsule } from "../../storage/capsules";
+import { saveCapsule, hasTodayCapsule } from "../../storage/capsules";
 
 const MOODS = [
   { label: "😊", value: "happy" },
@@ -20,6 +20,12 @@ export default function NewEntryScreen({ navigation }) {
 
   const handleSave = async () => {
     if (!text || !selectedMood) return;
+
+    const alreadySaved = await hasTodayCapsule();
+    if (alreadySaved) {
+      alert("You already logged your mood today.");
+      return;
+    }
 
     const newCapsule = {
       id: Date.now(),

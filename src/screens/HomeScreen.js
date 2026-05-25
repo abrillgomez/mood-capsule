@@ -58,6 +58,7 @@ export default function HomeScreen({ navigation }) {
         onPress={() => navigation.navigate("NewEntry")}>
         <Text style={styles.buttonText}>+ New capsule</Text>
       </TouchableOpacity>
+
     </View>
   );
 }
